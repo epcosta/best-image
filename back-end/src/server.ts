@@ -11,8 +11,7 @@ const PORT = Number(process.env.PORT) || 3000;
 
 app.use(
   cors({
-    origin: "*",
-    exposedHeaders: ["X-OpenAI-Usage"],
+    origin: ["http://localhost:5173", "https://best-image.onrender.com"],
   }),
 );
 
