@@ -158,10 +158,10 @@ function App() {
 
       formData.append("imagem", arquivo);
 
-      const url2 = `${import.meta.env.VITE_API_URL}/melhorar-imagem`;
+      const url3 = `${import.meta.env.VITE_API_URL}/melhorar-imagem`;
 
       console.log("VITE_API_URL:", import.meta.env.VITE_API_URL);
-      console.log("URL DA REQUISIÇÃO:", url2);
+      console.log("URL DA REQUISIÇÃO:", url3);
 
       const response = await fetch(
         `${import.meta.env.VITE_API_URL}/melhorar-imagem`,
