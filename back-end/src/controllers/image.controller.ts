@@ -44,6 +44,11 @@ export async function melhorarImagem(req: Request, res: Response) {
       res.setHeader("X-OpenAI-Usage", JSON.stringify(resultado.usage));
     }
 
+    console.log(
+      "Enviando imagem para frontend:",
+      resultado.buffer.length,
+      "bytes",
+    );
     res.status(200).send(resultado.buffer);
   } catch (error) {
     console.error("ERRO AO MELHORAR IMAGEM:");

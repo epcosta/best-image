@@ -165,6 +165,12 @@ function App() {
           body: formData,
         },
       );
+      //################ REMOVER DEPOIS DE TESTES ################
+      console.log("STATUS:", response.status);
+      console.log("OK:", response.ok);
+      console.log("CONTENT-TYPE:", response.headers.get("content-type"));
+      console.log("CONTENT-LENGTH:", response.headers.get("content-length"));
+      //###########################################################
 
       if (!response.ok) {
         const data = await response.json();
@@ -183,6 +189,12 @@ function App() {
       if (imagemMelhorada) {
         URL.revokeObjectURL(imagemMelhorada);
       }
+
+      //################ REMOVER DEPOIS DE TESTES ################
+      console.log("BLOB:", blob);
+      console.log("BLOB SIZE:", blob.size);
+      console.log("BLOB TYPE:", blob.type);
+      //###########################################################
 
       const url = URL.createObjectURL(blob);
 
